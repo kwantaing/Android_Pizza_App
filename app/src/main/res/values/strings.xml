@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Pizza House</string>
+
+    <string name="tv_pizzaSize">Choose Pizza Size</string>
+    <string name="size_sm">Small</string>
+    <string name="size_med">Medium</string>
+    <string name="size_lg">Large</string>
+
+
+    <string name="tvTopping">Choose Your Toppings</string>
+    <string name="pepperoni">Pepperoni</string>
+    <string name="chicken">Chicken</string>
+    <string name="mushroom">Mushroom</string>
+    <string name="olive">Olive</string>
+    <string name="green_pepper">Green Pepper</string>
+    <string name="extra_cheese">Extra Cheese</string>
+
+    <string name="continue_order_button">Continue</string>
+</resources>

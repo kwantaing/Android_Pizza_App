@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="141dp"
+        android:layout_height="147dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[0]" />
+
+    <CheckBox
+        android:id="@+id/topping_4"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginRight="60dp"
+        android:text="@string/olive"
+        android:textSize="10sp"
+        android:onClick="onClickToggleTopping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTopping" />
+
+    <CheckBox
+        android:id="@+id/topping_6"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/extra_cheese"
+        android:textSize="10sp"
+        android:onClick="onClickToggleTopping"
+        app:layout_constraintEnd_toEndOf="@+id/topping_5"
+        app:layout_constraintTop_toBottomOf="@+id/topping_5" />
+
+    <CheckBox
+        android:id="@+id/topping_5"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="@string/green_pepper"
+        android:textSize="10sp"
+        android:onClick="onClickToggleTopping"
+        app:layout_constraintEnd_toEndOf="@+id/topping_4"
+        app:layout_constraintTop_toBottomOf="@+id/topping_4" />
+
+    <CheckBox
+        android:id="@+id/topping_3"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/mushroom"
+        android:textSize="10sp"
+        android:onClick="onClickToggleTopping"
+        app:layout_constraintStart_toStartOf="@+id/topping_2"
+        app:layout_constraintTop_toBottomOf="@+id/topping_2" />
+
+    <CheckBox
+        android:id="@+id/topping_2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="@string/chicken"
+        android:textSize="10sp"
+        android:onClick="onClickToggleTopping"
+        app:layout_constraintStart_toStartOf="@+id/topping_1"
+        app:layout_constraintTop_toBottomOf="@+id/topping_1" />
+
+    <CheckBox
+        android:id="@+id/topping_1"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/pepperoni"
+        android:textSize="10sp"
+        android:onClick="onClickToggleTopping"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTopping" />
+
+    <TextView
+        android:id="@+id/tvTopping"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="@string/tvTopping"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="118dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/tv_pizzaSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <RadioGroup
+        android:id="@+id/size_radio"
+        android:layout_width="101dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+        <RadioButton
+            android:id="@+id/size_sm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/size_sm"
+            android:textSize="10sp"
+            android:onClick="onClickUpdateSizePrice"/>
+
+        <RadioButton
+            android:id="@+id/size_med"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/size_med"
+            android:textSize="10sp"
+            android:onClick="onClickUpdateSizePrice"/>
+
+        <RadioButton
+            android:id="@+id/size_lg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/size_lg"
+            android:textSize="10sp"
+            android:onClick="onClickUpdateSizePrice"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/continue_order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:text="@string/continue_order_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTopping"
+        android:onClick="continueOrder"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
