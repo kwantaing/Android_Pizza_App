@@ -8,9 +8,10 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="141dp"
-        android:layout_height="147dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="197dp"
+        android:layout_height="202dp"
+        android:contentDescription="Welcome to Pizza House!"
+        android:src="@drawable/pizza_main"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -98,7 +99,7 @@
         android:id="@+id/textView3"
         android:layout_width="118dp"
         android:layout_height="22dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/tv_pizzaSize"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -25,19 +25,17 @@ public class Checkout extends AppCompatActivity {
         TextView details = findViewById(R.id.Details);
         TextView totals = findViewById(R.id.tvTotal);
         String totalsText ="$ \t"+ Order.sizePrice+"\n\n";
-//        String deets = "Pizza size: "+ Order.PizzaSize +"\t\t\t $"+ Order.sizePrice+ "\n" + "Toppings: " + "\n";
-        String deets = "Pizza size: "+ Order.PizzaSize +"\n" + "Toppings: " + "\n";
+        String detailsText = "Pizza size: "+ Order.PizzaSize +"\n" + "Toppings: " + "\n";
 
         for(Topping topping : Order.Toppings){
-//            deets += "\t -"+ topping.topping_Name +"\t\t\t $"+ topping.price+"\n";
-            deets += "\t -" + topping.topping_Name+"\n";
+            detailsText += "\t -" + topping.topping_Name+"\n";
             totalsText += "$ \t" + topping.price+"\n";
         }
 
         Order.calculateTotal();
-        deets+= "\nGrand Total:";
+        detailsText+= "\nGrand Total:";
         totalsText  += "\n$ \t" + Order.grand_total+"\n";
-        details.setText(deets);
+        details.setText(detailsText);
         totals.setText(totalsText);
     }
     public OrderDetails updateOrderforSummary(OrderDetails Order){

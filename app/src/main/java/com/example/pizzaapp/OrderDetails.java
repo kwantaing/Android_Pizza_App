@@ -5,14 +5,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class OrderDetails implements Serializable {
+
     String PizzaSize;
     double sizePrice;
     double topping_subtotal = 0;
     double grand_total = 0;
     List<Topping> Toppings = new ArrayList<Topping>();
-
-
-
 
     public void calculateTotal(){
         this.topping_subtotal = 0;

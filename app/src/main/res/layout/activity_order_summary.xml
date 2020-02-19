@@ -70,23 +70,25 @@
         app:layout_constraintTop_toTopOf="@+id/Details" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/save_receipt_Button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:text="Save Recipt"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
+        android:text="Save Receipt"
+        app:layout_constraintEnd_toEndOf="@+id/new_order_button"
         app:layout_constraintHorizontal_bias="0.22"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/customer_info_label" />
+        app:layout_constraintTop_toBottomOf="@+id/customer_info_label"
+        android:onClick="save_writeReceipt"/>
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/new_order_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Start new order"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.819"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/button" />
+        app:layout_constraintTop_toTopOf="@+id/save_receipt_Button"
+        android:onClick="newOrder"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

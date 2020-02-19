@@ -20,7 +20,6 @@ public class MainActivity extends AppCompatActivity {
 
     OrderDetails Order = new OrderDetails();
 
-//    List<Topping> all_avail_toppings = new ArrayList<Topping>();
     List<CheckBox> topping_checkboxes = new ArrayList<CheckBox>();
     Dictionary<String,Double> all_toppings = new Hashtable<>();
 
@@ -80,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
         if(checkbox.isChecked()){
             Order.Toppings.add(new Topping(topping_name,all_toppings.get(topping_name)));
             Toast.makeText(this,"Added: "+topping_name,Toast.LENGTH_SHORT).show();
-            Toast.makeText(this,"Topping Count: "+ Order.Toppings.size(),Toast.LENGTH_SHORT).show();
+//            Toast.makeText(this,"Topping Count: "+ Order.Toppings.size(),Toast.LENGTH_SHORT).show();
 
         }else{
             if(!Order.Toppings.isEmpty()){
@@ -88,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
                     if(existingTopping.topping_Name == topping_name){
                         Order.Toppings.remove(existingTopping);
                         Toast.makeText(this, "Removed: "+topping_name,Toast.LENGTH_SHORT).show();
-                        Toast.makeText(this,"Topping Count: "+ Order.Toppings.size(),Toast.LENGTH_SHORT).show();
+//                        Toast.makeText(this,"Topping Count: "+ Order.Toppings.size(),Toast.LENGTH_SHORT).show();
                     }
                 }
             }
